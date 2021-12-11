@@ -1,16 +1,25 @@
 import React from 'react'
 import Navbar from './navbar'
-import '../styles/global.scss'
-import '../styles/typography.scss'
-import '../styles/variables.scss'
+import '../styles/main.scss'
+import styled from 'styled-components'
+
+const LayoutStyles = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    max-width: 1440px;
+    width: 100%;
+  }
+`
 
 export default function Layout({ children }) {
   return (
-    <div className="Layout">
+    <LayoutStyles>
       <Navbar />
       <div classNmae="content">
         { children }
       </div>
-    </div>
+    </LayoutStyles>
   )
 }

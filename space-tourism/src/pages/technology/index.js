@@ -5,7 +5,7 @@ export default function technology() {
   return (
     <Layout>
       <div>
-        <h2>The Technology</h2>
+        <h1>The Technology</h1>
       </div>
     </Layout>
   )
