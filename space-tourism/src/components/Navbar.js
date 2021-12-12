@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import logo from '../images/logo.svg'
 
 const MenuStyles = styled.div`
-  display: grid;
-  grid-template-columns: 48px 460px;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-top: 40px;
 `
 
 const LogoStyles = styled.div`
@@ -20,25 +21,50 @@ const LogoStyles = styled.div`
 
 const LinkStyle = styled.div`
   display: inline-flex;
-  justify-content: space-around;
+  width: 830px;
   align-items: center;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
-  height: 96px;
+  position: relative;
+  padding-left: 110px;
 
   a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-family: 'Barlow Condensed', sans-serif;
-    letter-spacing: 2.7;
-    font-weight: light;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 37px 0;
+    border-bottom: 3px solid transparent;
+    margin-left: 48px;
 
     span {
-      font-weight: bold;
-      margin-right: 5
-  px;
+      font-weight: 700;
+      margin-right: 5px;
     }
+
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255, .5);
+    }
+  }
+
+  [aria-current="page"] {
+    border-bottom: 3px solid rgba(255, 255, 255);
+
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255);
+    }
+  }
+
+  &:before {
+    content: '';
+    width: 437px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: -400px;
   }
 `
 
